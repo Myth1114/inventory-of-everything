@@ -1,0 +1,233 @@
+.worlds-page {
+  min-height: 80vh;
+  background: var(--color-obsidian);
+  color: var(--color-text-primary);
+}
+
+.worlds-page__heading {
+  max-width: 900px;
+  margin-bottom: clamp(48px, 8vw, 100px);
+}
+
+.worlds-page__heading h1 {
+  margin: 24px 0;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7.5vw, 7rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.worlds-page__heading h1 em {
+  color: var(--color-discovery);
+  font-weight: 400;
+}
+
+.worlds-page__intro {
+  max-width: 590px;
+  color: var(--color-text-muted);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.8;
+}
+
+.worlds-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-dark);
+  background: var(--color-border-dark);
+}
+
+.worlds-page__card {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  padding: clamp(20px, 2.5vw, 36px);
+  background: var(--color-obsidian);
+  color: inherit;
+  text-decoration: none;
+  transition: background var(--duration-normal) var(--ease-standard),
+    color var(--duration-normal) var(--ease-standard);
+}
+
+.worlds-page__card:hover,
+.worlds-page__card:focus-visible,
+.worlds-page__card.is-selected {
+  background: var(--color-obsidian-soft);
+}
+
+.worlds-page__card:focus-visible,
+.worlds-page__reset:focus-visible {
+  outline: 2px solid var(--color-discovery);
+  outline-offset: -4px;
+}
+
+.worlds-page__card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.worlds-page__card-top span:last-child {
+  color: var(--color-discovery);
+  font-size: 1.75rem;
+}
+
+.worlds-page__category {
+  margin: 38px 0 10px;
+  color: var(--color-discovery);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+}
+
+.worlds-page__card h2 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.worlds-page__description {
+  margin: 0 0 32px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.worlds-page__card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border-dark);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+}
+
+.worlds-page__card-link span {
+  color: var(--color-discovery);
+  font-size: 1rem;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.worlds-page__card:hover .worlds-page__card-link span {
+  transform: translate(3px, -3px);
+}
+
+.worlds-page__selected {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  margin-bottom: 48px;
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid var(--color-border-dark);
+  background: var(--color-surface-dark);
+}
+
+.worlds-page__selected h2 {
+  margin: 16px 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+}
+
+.worlds-page__selected > div:first-child > p:last-child,
+.worlds-page__entries > p {
+  max-width: 620px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.worlds-page__reset {
+  align-self: start;
+  color: var(--color-discovery);
+  text-decoration: none;
+}
+
+.worlds-page__entries {
+  grid-column: 1 / -1;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.worlds-page__entries h3 {
+  margin: 0 0 20px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.worlds-page__entries ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.worlds-page__entries li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.worlds-page__entries li span:last-child {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.worlds-page__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+  .worlds-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .worlds-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .worlds-page__card {
+    min-height: 260px;
+  }
+
+  .worlds-page__selected {
+    grid-template-columns: 1fr;
+  }
+
+  .worlds-page__entries {
+    grid-column: auto;
+  }
+
+  .worlds-page__footer {
+    flex-direction: column;
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .worlds-page__card,
+  .worlds-page__card-link span {
+    transition: none;
+  }
+}
