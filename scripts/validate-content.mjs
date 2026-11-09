@@ -13,6 +13,7 @@ const errors = [];
 const warnings = [];
 const ids = new Set();
 const contentPaths = new Set();
+const imageIds = new Set();
 console.log("\nValidating The Inventory of Everything...\n");
 
 // Check unique IDs and required metadata
@@ -31,6 +32,67 @@ for (const entry of entries) {
   }
 
   ids.add(entry.id);
+  // Validate entry images
+  if (entry.images !== undefined && !Array.isArray(entry.images)) {
+    errors.push(`Entry "${entry.id}" must have images as an array.`);
+  }
+
+  if (Array.isArray(entry.images)) {
+    for (const image of entry.images) {
+      if (!image.id || typeof image.id !== "string") {
+        errors.push(`Entry "${entry.id}" has an image without a valid ID.`);
+        continue;
+      }
+
+      const imageKey = `${entry.id}:${image.id}`;
+
+      if (imageIds.has(imageKey)) {
+        errors.push(
+          `Entry "${entry.id}" contains duplicate image ID "${image.id}".`
+        );
+      }
+
+      imageIds.add(imageKey);
+
+      if (!image.src || typeof image.src !== "string") {
+        errors.push(
+          `Image "${image.id}" in "${entry.id}" is missing its source.`
+        );
+      }
+
+      if (!image.alt || typeof image.alt !== "string") {
+        errors.push(
+          `Image "${image.id}" in "${entry.id}" is missing alt text.`
+        );
+      }
+
+      if (!["hero", "artifact", "diagram", "editorial"].includes(image.kind)) {
+        errors.push(
+          `Image "${image.id}" in "${entry.id}" has an invalid kind.`
+        );
+      }
+
+      if (image.caption !== undefined && typeof image.caption !== "string") {
+        errors.push(
+          `Image "${image.id}" in "${entry.id}" has an invalid caption.`
+        );
+      }
+
+      if (image.credit !== undefined && typeof image.credit !== "string") {
+        errors.push(
+          `Image "${image.id}" in "${entry.id}" has an invalid credit.`
+        );
+      }
+
+      if (image.src instanceof URL) {
+        const imagePath = fileURLToPath(image.src);
+
+        if (!fs.existsSync(imagePath)) {
+          errors.push(`Image file missing for "${entry.id}": ${imagePath}`);
+        }
+      }
+    }
+  }
   const worldExists = worlds.some((world) => world.slug === entry.worldSlug);
 
   if (!worldExists) {

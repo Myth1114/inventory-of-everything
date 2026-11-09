@@ -5,6 +5,7 @@ import categories from "../data/categories";
 import entries from "../data/entries";
 import ReactMarkDown from "react-markdown";
 import "./EntryPage.css";
+import EntryImage from "../components/entries/EntryImage";
 
 const articleFiles = import.meta.glob("../content/entries/**/*.md", {
   query: "?raw",
@@ -105,15 +106,20 @@ export default function EntryPage() {
             {category && <span>{category.title}</span>}
           </div>
         </header>
-        {entry.heroImage && (
-          <figure className="entry-page__hero-image">
-            <img
-              src={entry.heroImage}
-              alt={`Antique magnetic compass on a historical navigation map`}
-              loading="eager"
-            />
-          </figure>
-        )}
+        <EntryImage
+          image={
+            entry.images?.find((image) => image.kind === "hero") ||
+            (entry.heroImage
+              ? {
+                  id: `${entry.id}-hero`,
+                  src: entry.heroImage,
+                  alt: `${entry.title} — main archive image`,
+                  kind: "hero",
+                }
+              : null)
+          }
+          className="entry-page__hero-image"
+        />
         {entry.tags?.length > 0 && (
           <section className="entry-page__tags" aria-label="Entry tags">
             {entry.tags.map((tag) => (

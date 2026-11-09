@@ -22,26 +22,31 @@ export default function WorldsPage() {
         </header>
 
         <div className="worlds-page__grid">
-          {worlds.map((world) => (
-            <Link
-              key={world.slug}
-              to={`/worlds/${world.slug}`}
-              className="worlds-page__card"
-            >
-              <div className="worlds-page__card-top">
-                <span>{world.number}</span>
-                <span aria-hidden="true">{world.symbol}</span>
-              </div>
+          {worlds.map((world) => {
+            const Icon = world.icon;
+            return (
+              <Link
+                key={world.slug}
+                to={`/worlds/${world.slug}`}
+                className="worlds-page__card"
+              >
+                <div className="worlds-page__card-top">
+                  <span>{world.number}</span>
+                  <span aria-hidden="true">
+                    {Icon ? <Icon size={20} strokeWidth={1.75} /> : null}
+                  </span>
+                </div>
 
-              <p className="worlds-page__category">{world.category}</p>
-              <h2>{world.title}</h2>
-              <p className="worlds-page__description">{world.description}</p>
+                <p className="worlds-page__category">{world.category}</p>
+                <h2>{world.title}</h2>
+                <p className="worlds-page__description">{world.description}</p>
 
-              <span className="worlds-page__card-link">
-                EXPLORE WORLD <span aria-hidden="true">↗</span>
-              </span>
-            </Link>
-          ))}
+                <span className="worlds-page__card-link">
+                  EXPLORE WORLD <span aria-hidden="true">↗</span>
+                </span>
+              </Link>
+            );
+          })}
         </div>
 
         <footer className="worlds-page__footer">

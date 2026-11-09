@@ -1,10 +1,25 @@
+import {
+  Boxes, // Matter & Materials
+  Zap, // Energy & Motion
+  Cog, // Tools & Machines
+  Building2, // Structures & Cities
+  Radio, // Communication
+  Cpu, // Computing & Logic
+  HeartPulse, // Life & Health
+  Wheat, // Food & Agriculture
+  Compass, // Transport & Navigation
+  Palette, // Art & Design
+  Clock, // Time & Measurement
+  Globe, // Earth & Cosmos
+} from "lucide-react";
+
 const worlds = [
   {
     number: "01",
     slug: "matter-materials",
     title: "Matter & Materials",
     category: "THE MATERIAL WORLD",
-    symbol: "◈",
+    icon: Boxes,
     description:
       "Explore the substances that shape our world, from ancient materials to engineered matter.",
   },
@@ -13,7 +28,7 @@ const worlds = [
     slug: "energy-motion",
     title: "Energy & Motion",
     category: "FORCES & ENERGY",
-    symbol: "↗",
+    icon: Zap,
     description:
       "Discover the forces, energy sources, and principles that make things move and change.",
   },
@@ -22,7 +37,7 @@ const worlds = [
     slug: "tools-machines",
     title: "Tools & Machines",
     category: "HUMAN INGENUITY",
-    symbol: "⚙",
+    icon: Cog,
     description:
       "Explore the tools and machines that extend human ability and transform everyday work.",
   },
@@ -31,7 +46,7 @@ const worlds = [
     slug: "structures-cities",
     title: "Structures & Cities",
     category: "BUILT ENVIRONMENTS",
-    symbol: "⌂",
+    icon: Building2,
     description:
       "Discover how buildings, infrastructure, and cities are designed and constructed.",
   },
@@ -40,7 +55,7 @@ const worlds = [
     slug: "communication",
     title: "Communication",
     category: "SHARING INFORMATION",
-    symbol: "⌁",
+    icon: Radio,
     description:
       "Trace the systems and inventions that help people share information across distance.",
   },
@@ -49,7 +64,7 @@ const worlds = [
     slug: "computing-logic",
     title: "Computing & Logic",
     category: "INFORMATION SYSTEMS",
-    symbol: "⠿",
+    icon: Cpu,
     description:
       "Explore computation, algorithms, and the ideas behind the digital world.",
   },
@@ -58,7 +73,7 @@ const worlds = [
     slug: "life-health",
     title: "Life & Health",
     category: "LIVING SYSTEMS",
-    symbol: "✳",
+    icon: HeartPulse,
     description:
       "Discover the science, discoveries, and inventions that help us understand living things.",
   },
@@ -67,7 +82,7 @@ const worlds = [
     slug: "food-agriculture",
     title: "Food & Agriculture",
     category: "FROM LAND TO TABLE",
-    symbol: "❋",
+    icon: Wheat,
     description:
       "Explore how people grow, preserve, prepare, and distribute the food that sustains us.",
   },
@@ -76,7 +91,7 @@ const worlds = [
     slug: "transport-navigation",
     title: "Transport & Navigation",
     category: "MOVEMENT & WAYFINDING",
-    symbol: "⌖",
+    icon: Compass,
     description:
       "Follow the technologies and ideas that help people travel, navigate, and connect places.",
   },
@@ -85,7 +100,7 @@ const worlds = [
     slug: "art-design",
     title: "Art & Design",
     category: "CREATIVITY & FORM",
-    symbol: "✳",
+    icon: Palette,
     description:
       "Explore the materials, techniques, and ideas behind the things people create.",
   },
@@ -94,7 +109,7 @@ const worlds = [
     slug: "time-measurement",
     title: "Time & Measurement",
     category: "MAKING SENSE OF THE WORLD",
-    symbol: "◷",
+    icon: Clock,
     description:
       "Discover the instruments and systems used to measure, compare, and understand the world.",
   },
@@ -103,7 +118,7 @@ const worlds = [
     slug: "earth-cosmos",
     title: "Earth & Cosmos",
     category: "OUR PLACE IN THE UNIVERSE",
-    symbol: "◎",
+    icon: Globe,
     description:
       "Explore the discoveries that reveal how our planet and the wider universe work.",
   },

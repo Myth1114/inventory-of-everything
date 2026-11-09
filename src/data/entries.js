@@ -1,5 +1,5 @@
 const magneticCompassHero = new URL(
-  "../assets/entries/magnetic-compass/hero.webp",
+  "../assets/entries/magnetic-compass/hero.jpeg",
   import.meta.url
 ).href;
 const entries = [
@@ -53,9 +53,11 @@ const entries = [
       {
         id: "magnetic-compass-hero",
         src: magneticCompassHero,
-        alt: "An antique brass compass resting on an aged navigation map.",
-        caption: "A magnetic compass, an enduring instrument of navigation.",
-        credit: "Custom 3D render created for The Inventory of Everything.",
+        alt: "Historical reconstruction of an ancient Chinese south-pointing spoon compass.",
+        caption:
+          "A reconstruction of the early Chinese south-pointing spoon compass tradition.",
+        credit:
+          "AI-generated historical reconstruction; not an authentic surviving artifact.",
         kind: "hero",
       },
     ],

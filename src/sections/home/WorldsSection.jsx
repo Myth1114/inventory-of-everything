@@ -22,36 +22,39 @@ export default function WorldsSection() {
         </div>
 
         <div className="world-grid">
-          {worlds.map((world, index) => (
-            <Link
-              className={`world-card world-card--${(index % 4) + 1}`}
-              to={`/worlds/${world.slug}`}
-              key={world.slug}
-            >
-              <div className="world-card__top">
-                <span className="world-card__number">{world.number}</span>
+          {worlds.map((world, index) => {
+            const Icon = world.icon;
+            return (
+              <Link
+                className={`world-card world-card--${(index % 4) + 1}`}
+                to={`/worlds/${world.slug}`}
+                key={world.slug}
+              >
+                <div className="world-card__top">
+                  <span className="world-card__number">{world.number}</span>
 
-                <span className="world-card__symbol" aria-hidden="true">
-                  {world.symbol}
-                </span>
-              </div>
+                  <span className="world-card__symbol" aria-hidden="true">
+                    {Icon ? <Icon size={20} strokeWidth={1.75} /> : null}
+                  </span>
+                </div>
 
-              <div className="world-card__body">
-                <p className="world-card__category">{world.category}</p>
+                <div className="world-card__body">
+                  <p className="world-card__category">{world.category}</p>
 
-                <h3>{world.title}</h3>
+                  <h3>{world.title}</h3>
 
-                <p className="world-card__description">{world.description}</p>
-              </div>
+                  <p className="world-card__description">{world.description}</p>
+                </div>
 
-              <div className="world-card__bottom">
-                <span>ENTER THIS WORLD</span>
-                <span className="world-card__arrow" aria-hidden="true">
-                  ↗
-                </span>
-              </div>
-            </Link>
-          ))}
+                <div className="world-card__bottom">
+                  <span>ENTER THIS WORLD</span>
+                  <span className="world-card__arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="home-worlds__footer">
