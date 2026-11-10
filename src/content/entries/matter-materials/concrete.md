@@ -10,13 +10,17 @@ Concrete became one of the foundations of human settlement because it can be sha
 
 ## Origins and Early History
 
-The idea of creating artificial stone from mineral binders and granular materials is thousands of years old. Ancient communities developed different mortars and construction mixtures using materials such as lime, gypsum, clay, and locally available aggregates. These early materials varied considerably, so they should not all be treated as identical to modern concrete.
+The development of concrete-like building materials was gradual. Long before modern cement existed, communities learned to combine mineral binders with aggregates and other materials to create durable floors, walls, and construction surfaces.
 
-The ancient Greeks made use of volcanic materials that could react with lime. One particularly important material was pozzolana, a volcanic ash associated with the region around Pozzuoli in Italy. When suitable pozzolanic materials are combined with lime and water, they can form compounds that help a mixture harden and resist water.
+Some of the earliest important evidence comes from Neolithic settlements in the Levant. At Yiftah’el in present-day Israel, archaeologists uncovered substantial lime-based plaster floors dating to the Pre-Pottery Neolithic B period, roughly 8000–7000 BCE. These floors were made using heat-altered limestone and other mineral and granular materials. They demonstrate sophisticated early lime technology, although they are more accurately described as plaster than as modern concrete.
 
-Roman builders developed these techniques extensively. Their concrete, commonly called _opus caementicium_, combined lime-based mortar with stone fragments and, in some formulations, volcanic materials. The ingredients and construction methods varied according to the location, period, and intended use. Some lime–pozzolan mixtures could harden in wet conditions, making them valuable for particular hydraulic structures.
+Over subsequent millennia, different societies developed lime mortars and other mineral-based construction mixtures. The ingredients and techniques varied according to local geology, available fuels, and building requirements.
 
-Roman concrete helped builders construct complex forms that would have been difficult to achieve using large cut stones alone. The Pantheon in Rome, with its enormous unreinforced concrete dome, is a celebrated example of Roman engineering. However, the performance of ancient concrete depended on its particular materials, mixture, workmanship, and exposure conditions; it should not be assumed that every Roman concrete structure had the same durability.
+The ancient Greeks used volcanic materials that could react with lime. One particularly important material was pozzolana, a volcanic ash associated with the region around Pozzuoli in Italy. When suitable pozzolanic materials are combined with lime and water, they can form compounds that help a mixture harden and resist water.
+
+Roman builders developed these techniques extensively. Their concrete, commonly called _opus caementicium_, combined lime-based mortar with stone fragments and, in some formulations, volcanic materials. Ingredients and construction methods varied according to the location, period, and intended use. Some lime–pozzolan mixtures could harden in wet conditions, making them valuable for hydraulic structures.
+
+Roman concrete helped builders construct complex forms that would have been difficult to achieve using large cut stones alone. The Pantheon in Rome, with its enormous unreinforced concrete dome, is a celebrated example of Roman engineering. However, ancient concrete performance depended on its materials, mixture, workmanship, and exposure conditions; not every Roman concrete structure had the same durability.
 
 ## How It Works
 
@@ -26,7 +30,7 @@ In ordinary Portland-cement concrete, water initiates a series of chemical react
 
 The main ingredients serve different purposes:
 
-- **Cement:** The hydraulic binder that reacts with water.
+- **Cement:** The binder that reacts with water in ordinary Portland-cement concrete.
 - **Water:** Enables hydration and helps make the fresh mixture workable.
 - **Fine aggregates:** Usually sand, which fills smaller spaces between larger particles.
 - **Coarse aggregates:** Commonly gravel or crushed stone, which forms much of the concrete's volume.
@@ -39,7 +43,7 @@ The proportions of the ingredients matter. Excess water can increase the amount 
 
 ## How It Evolved
 
-Roman engineering demonstrated how lime and volcanic materials could produce durable construction mixtures, including materials suitable for certain underwater structures. Knowledge and practices varied across regions and periods, and later builders continued to use lime mortars and other cementitious materials.
+Roman engineering demonstrated how lime and volcanic materials could produce durable construction mixtures, including materials suitable for certain underwater structures. These developments built on earlier traditions of lime production and mortar-making.
 
 The development of modern cement accelerated during the Industrial Revolution. Builders and inventors investigated how the composition of limestone and clay, along with firing conditions, affected the properties of mineral binders.
 

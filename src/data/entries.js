@@ -2,6 +2,10 @@ const magneticCompassHero = new URL(
   "../assets/entries/magnetic-compass/hero.jpeg",
   import.meta.url
 ).href;
+const concreteHero = new URL(
+  "../assets/entries/concrete/hero.jpeg",
+  import.meta.url
+).href;
 const entries = [
   {
     id: "printing-press",
@@ -33,6 +37,19 @@ const entries = [
     relatedEntryIds: ["printing-press"],
     featured: true,
     status: "published",
+    heroImage: concreteHero,
+    images: [
+      {
+        id: "concrete-hero",
+        src: concreteHero,
+        alt: "Historical reconstruction of an early Neolithic lime-bound floor.",
+        caption:
+          "An imagined reconstruction of a Neolithic lime-plastered floor from the southern Levant, an early precursor to later cementitious building materials.",
+        credit:
+          "AI-generated historical reconstruction; not an authentic archaeological photograph.",
+        kind: "hero",
+      },
+    ],
   },
   {
     id: "magnetic-compass",

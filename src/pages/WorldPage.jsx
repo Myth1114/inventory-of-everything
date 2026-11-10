@@ -65,24 +65,26 @@ export default function WorldPage() {
         </nav>
 
         <header className="world-page__hero">
-          <div className="world-page__identity">
+          {/* <div className="world-page__identity">
             <span className="world-page__number">{world.number}</span>
             <span className="world-page__symbol" aria-hidden="true">
               {world.symbol}
             </span>
-          </div>
+          </div> */}
 
-          <p className="eyebrow">{world.category}</p>
+          <p className="eyebrow">
+            {world.number} {world.category}
+          </p>
           <h1>{world.title}</h1>
           <p className="world-page__description">{world.description}</p>
 
-          <div className="world-page__meta">
+          {/* <div className="world-page__meta">
             <span>
               {worldEntries.length} published{" "}
               {worldEntries.length === 1 ? "entry" : "entries"}
             </span>
             <span>THE INVENTORY OF EVERYTHING</span>
-          </div>
+          </div> */}
         </header>
 
         <section className="world-page__entries">
@@ -159,7 +161,7 @@ export default function WorldPage() {
                         to={`/entries/${entry.id}`}
                         className="world-page__entry-link"
                       >
-                        {entry.title}
+                        {entry.title} <small>({entry.period})</small>
                       </Link>
                     </h3>
                     <p>{entry.summary}</p>
@@ -173,9 +175,9 @@ export default function WorldPage() {
                     )}
                   </div>
 
-                  <span className="world-page__entry-period">
+                  {/* <span className="world-page__entry-period">
                     {entry.period}
-                  </span>
+                  </span> */}
                 </article>
               ))}
             </div>
