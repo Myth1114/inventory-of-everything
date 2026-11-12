@@ -91,7 +91,7 @@
   position: absolute;
   top: 20px;
   bottom: 35px;
-  left: 67px;
+  left: 87px;
   width: 1px;
   background: linear-gradient(
     to bottom,
@@ -226,7 +226,7 @@
   }
 
   .origins-journey::before {
-    left: 57px;
+    left: 62px;
   }
 
   .origins-stage {
@@ -260,7 +260,7 @@
   }
 
   .origins-journey::before {
-    left: 43px;
+    left: 47px;
   }
 
   .origins-stage {
